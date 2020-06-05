@@ -14,6 +14,10 @@
       <li v-for="person in persons">{{ person }}</li>
     </ul>
 
+    <div>
+      <input type="text" v-model="message"> <!-- v-model != :value // avec v-model, change la valeur de la var message-->
+    </div>
+
     <div v-if="success">
        <p @click="close">icon</p> <!-- v-on == @ -->
       <p>variable success = true</p>
