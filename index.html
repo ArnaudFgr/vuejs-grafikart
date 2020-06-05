@@ -8,18 +8,19 @@
 <body>
   
   <div id="app">
-    <a :href="link">{{ message }}</a>
+    <a :href="link">{{ message }}</a> <!-- v-bind == : -->
 
     <ul>
       <li v-for="person in persons">{{ person }}</li>
     </ul>
 
     <div v-if="success">
+       <p @click="close">icon</p> <!-- v-on == @ -->
       <p>variable success = true</p>
     </div>
-    <div v-if="!success">
+    <!-- <div v-if="!success">
       <p>variable success = false</p>
-    </div>
+    </div> -->
     <!-- <div v-else>
       <p>variable success = false</p>
     </div> -->

@@ -5,5 +5,11 @@ new Vue({
     link: 'https://github.com/Aarnow/vuejs-grafikart',
     success: true,
     persons: ['John', 'Nathan', 'Marion', 'Nicolas', 'Marco']
+  },
+
+  methods:{
+    close: function () {
+      this.success = false
+    }
   }
 })
