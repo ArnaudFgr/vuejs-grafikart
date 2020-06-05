@@ -4,6 +4,7 @@ new Vue({
     message: 'Salut les gens',
     link: 'https://github.com/Aarnow/vuejs-grafikart',
     success: true,
+    cls: 'green',
     persons: ['John', 'Nathan', 'Marion', 'Nicolas', 'Marco']
   },
 

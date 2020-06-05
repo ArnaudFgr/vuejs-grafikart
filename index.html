@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 <body>
@@ -18,9 +19,12 @@
       <input type="text" v-model="message"> <!-- v-model != :value // avec v-model, change la valeur de la var message-->
     </div>
 
-    <input type="checkbox" v-model="success">
-    <div v-if="success">
-      <p @click="close">icon</p> <!-- v-on == @ -->
+    <input type="checkbox" v-model="cls" :true-value="'green'" :false-value="'red'">
+    <div :class="cls">
+    <!-- <div :class="{green : success, red: !success}"> ternary -->
+    <!-- <div :class="success ? 'green' : 'red'">   -->
+    <!--  <div v-if="success"> -->
+      <p @click="close">X</p> <!-- v-on == @ -->
       <p>variable success = true</p>
     </div>
     <!-- <div v-if="!success">
