@@ -10,12 +10,19 @@
   <div id="app">
     <a :href="link">{{ message }}</a>
 
+    <ul>
+      <li v-for="person in persons">{{ person }}</li>
+    </ul>
+
     <div v-if="success">
       <p>variable success = true</p>
     </div>
     <div v-if="!success">
       <p>variable success = false</p>
     </div>
+    <!-- <div v-else>
+      <p>variable success = false</p>
+    </div> -->
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>

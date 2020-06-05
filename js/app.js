@@ -3,6 +3,7 @@ new Vue({
   data:{
     message: 'Salut les gens',
     link: 'https://github.com/Aarnow/vuejs-grafikart',
-    success: false
+    success: true,
+    persons: ['John', 'Nathan', 'Marion', 'Nicolas', 'Marco']
   }
 })
