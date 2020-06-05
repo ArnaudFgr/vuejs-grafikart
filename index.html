@@ -8,9 +8,16 @@
 <body>
   
   <div id="app">
-    <a v-bind:href="link">{{ message }}</a>
+    <a :href="link">{{ message }}</a>
+
+    <div v-if="success">
+      <p>variable success = true</p>
+    </div>
+    <div v-if="!success">
+      <p>variable success = false</p>
+    </div>
   </div>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
   <script src="js/app.js"></script>
 </body>
