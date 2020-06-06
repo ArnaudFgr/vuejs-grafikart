@@ -33,3 +33,34 @@ let timer = new Vue ({
     clearInterval(this.$interval);
   }
 })
+
+let watcher = new Vue({
+  el:'#watcher',
+  data:{
+    success: false,
+    message: '',
+    firstname: 'Bob',
+    lastname: 'Lennon'
+  },
+  watch:{
+    fullname: function(value){
+      console.log('watch', value)
+    }
+  },
+  computed:{
+    cls: function(){
+      console.log('cls called')
+      return this.success === true ? 'green' : 'red'
+    },
+    fullname: {
+      get: function(){
+        return this.firstname + ' ' + this.lastname
+      },
+      set: function (value){
+        let parts = value.split(' ')
+        this.firstname = parts[0]
+        this.lastname = parts[1]
+      }
+    }
+  }
+})
