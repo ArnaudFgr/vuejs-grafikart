@@ -25,8 +25,11 @@ let timer = new Vue ({
     seconds: 0
   },
   mounted: function(){
-    setInterval(() => {
+    this.$interval = setInterval(() => {
       this.seconds++
     }, 1000)
+  },
+  destroyed: function(){
+    clearInterval(this.$interval);
   }
 })
