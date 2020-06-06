@@ -1,4 +1,4 @@
-new Vue({
+let vm = new Vue({
   el:'#app',
   data:{
     message: 'Salut les gens',
@@ -12,6 +12,21 @@ new Vue({
     close: function () {
       this.message = 'fermé',
       this.success = false
+    },
+    addPerson: function () {
+      this.persons.push('Merlin');
     }
+  }
+})
+
+let timer = new Vue ({
+  el:'#timer',
+  data:{
+    seconds: 0
+  },
+  mounted: function(){
+    setInterval(() => {
+      this.seconds++
+    }, 1000)
   }
 })
