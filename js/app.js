@@ -8,6 +8,14 @@ let madirect = function(el, binding){
     console.log('bind')
 }
 
+Vue.filter('capitalize', function(value, prefix, suffix){
+  return prefix + value.toUpperCase() + suffix
+})
+
+Vue.filter('reverse', function(value){
+  return value.split('').reverse().join('')
+})
+
 let vm = new Vue({
   el:'#app',
   data:{

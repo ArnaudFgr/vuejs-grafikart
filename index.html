@@ -54,9 +54,9 @@
   <div id="event">
     <a href="#" @click.prevent.stop.self="demo">mon event</a>  <!-- prevent = annule l'event / stop = empeche la remonté aux parents / self = cliquer précisement sur l'element -->
     <input type="text" v-model.lazy="msglazy"> <!-- lazy = update après validation -->
-    {{ msglazy }}
+    {{ msglazy | reverse}}
     <input type="text" v-madirect="message" v-model="message">
-    {{ message }}
+    {{ message | capitalize('prefix','suffix') | reverse}} <!-- plusieurs filtre possible avec paramètres -->
 
   </div>
 
