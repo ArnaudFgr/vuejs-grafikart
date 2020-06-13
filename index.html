@@ -7,59 +7,10 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <h1>STORE</h1>
   <div id="app">
-    <a :href="link">{{ message }}</a> <!-- v-bind == : -->
-    <button @click="addPerson">Ajouter une personne</button>
-    <ul>
-      <li v-for="person in persons">{{ person }}</li>
-    </ul>
-
-    <div>
-      <input type="text" v-model="message"> <!-- v-model != :value // avec v-model, change la valeur de la var message-->
-    </div>
-
-    <input type="checkbox" v-model="cls" :true-value="'green'" :false-value="'red'">
-    <div :class="cls">
-    <!-- <div :class="{green : success, red: !success}"> ternary -->
-    <!-- <div :class="success ? 'green' : 'red'">   -->
-    <!--  <div v-if="success"> -->
-      <p @click="close">X</p> <!-- v-on == @ -->
-      <p>variable success = true</p>
-    </div>
-    <!-- <div v-if="!success">
-      <p>variable success = false</p>
-    </div> -->
-    <!-- <div v-else>
-      <p>variable success = false</p>
-    </div> -->
+    <notifications></notifications>
   </div>
-
-  <div id="timer">
-    {{ seconds }}
-  </div>
-
-  <div id="watcher">
-    <input type="checkbox" v-model="success"></input>
-    <input type="text" v-model='message'>
-    {{ message }}
-    <p>
-      Prénom: {{ firstname }} <br>
-      Nom: {{ lastname }} <br>
-      Complet: <input type="text" v-model="fullname">
-    </p>
-    <div class="message" :class="cls">La super valeur computed</div>
-  </div>
-
-  <div id="event">
-    <a href="#" @click.prevent.stop.self="demo">mon event</a>  <!-- prevent = annule l'event / stop = empeche la remonté aux parents / self = cliquer précisement sur l'element -->
-    <input type="text" v-model.lazy="msglazy"> <!-- lazy = update après validation -->
-    {{ msglazy | reverse}}
-    <input type="text" v-madirect="message" v-model="message">
-    {{ message | capitalize('prefix','suffix') | reverse}} <!-- plusieurs filtre possible avec paramètres -->
-
-  </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
   <script src="js/app.js"></script>
 </body>
