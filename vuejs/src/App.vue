@@ -3,15 +3,17 @@
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
     <counter></counter>
+    <alert></alert>
   </div>
 </template>
 
 <script>
 import Counter from './Counter.vue'
+import Alert from './Alert.vue'
 
 export default {
   name: 'app',
-  components: { Counter },
+  components: { Counter, Alert },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App with Grafikart'
