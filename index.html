@@ -51,6 +51,15 @@
     <div class="message" :class="cls">La super valeur computed</div>
   </div>
 
+  <div id="event">
+    <a href="#" @click.prevent.stop.self="demo">mon event</a>  <!-- prevent = annule l'event / stop = empeche la remonté aux parents / self = cliquer précisement sur l'element -->
+    <input type="text" v-model.lazy="msglazy"> <!-- lazy = update après validation -->
+    {{ msglazy }}
+    <input type="text" v-madirect="message" v-model="message">
+    {{ message }}
+
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
   <script src="js/app.js"></script>
 </body>

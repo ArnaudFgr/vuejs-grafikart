@@ -1,3 +1,13 @@
+// Vue.directive('salut', function(el, binding, vnode){
+//     console.log(el, binding)
+//     el.value = binding.value
+// })
+
+let madirect = function(el, binding){
+    el.value = binding.value
+    console.log('bind')
+}
+
 let vm = new Vue({
   el:'#app',
   data:{
@@ -61,6 +71,22 @@ let watcher = new Vue({
         this.firstname = parts[0]
         this.lastname = parts[1]
       }
+    }
+  }
+})
+
+let event = new Vue ({
+  el:'#event',
+  directives:{
+    madirect
+  },
+  data:{
+    msglazy: "super lazy",
+    message: "msg"
+  },
+  methods:{
+    demo: function (){
+      console.log('Salut la demo')
     }
   }
 })
